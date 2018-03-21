@@ -47,7 +47,7 @@ if __name__ == "__main__":
             percent /= float(len(samples))
             percent = int(percent * 100)
 
-            if percent > 90:
+            if percent > 75:
                 has_user = True
                 break
 
@@ -56,6 +56,8 @@ if __name__ == "__main__":
             print "~ Saving image to {} file".format(image_file)
             cv2.imwrite(image_file, image)
             break
+        
+        time.sleep(0.01)
 
     print "~ Stopping camera ..."
     camera.stop()
